@@ -22,5 +22,20 @@ namespace TP_2_Programacion3
             string textoAMostrar = "La fecha y hora actual es: " + DateTime.Now.ToString();
             MessageBox.Show(textoAMostrar);
         }
+
+        private void buttonBuscarArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAgregarArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonListarArticulos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace TP_2_Programacion3
         int idCategoria;
         float precio;
 
-        //to do
+        //todo
 
         //List<Imagenes> listaImagenes;
         //Categoria categoria;
