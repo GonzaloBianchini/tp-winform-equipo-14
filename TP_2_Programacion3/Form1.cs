@@ -16,5 +16,11 @@ namespace TP_2_Programacion3
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string textoAMostrar = "La fecha y hora actual es: " + DateTime.Now.ToString();
+            MessageBox.Show(textoAMostrar);
+        }
     }
 }
