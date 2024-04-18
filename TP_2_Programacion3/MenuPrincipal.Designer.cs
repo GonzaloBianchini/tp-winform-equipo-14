@@ -1,6 +1,6 @@
 ﻿namespace TP_2_Programacion3
 {
-    partial class Form1
+    partial class MenuPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.labelCatalogoArticulos = new System.Windows.Forms.Label();
             this.buttonBuscarArticulo = new System.Windows.Forms.Button();
             this.buttonAgregarArticulo = new System.Windows.Forms.Button();
             this.buttonListarArticulos = new System.Windows.Forms.Button();
+            this.buttonSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelCatalogoArticulos
@@ -74,11 +75,22 @@
             this.buttonListarArticulos.UseVisualStyleBackColor = true;
             this.buttonListarArticulos.Click += new System.EventHandler(this.buttonListarArticulos_Click);
             // 
-            // Form1
+            // buttonSalir
+            // 
+            this.buttonSalir.Location = new System.Drawing.Point(230, 349);
+            this.buttonSalir.Name = "buttonSalir";
+            this.buttonSalir.Size = new System.Drawing.Size(112, 30);
+            this.buttonSalir.TabIndex = 5;
+            this.buttonSalir.Text = "SALIR";
+            this.buttonSalir.UseVisualStyleBackColor = true;
+            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
+            // 
+            // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 534);
+            this.Controls.Add(this.buttonSalir);
             this.Controls.Add(this.buttonListarArticulos);
             this.Controls.Add(this.buttonAgregarArticulo);
             this.Controls.Add(this.buttonBuscarArticulo);
@@ -87,10 +99,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(653, 581);
             this.MinimumSize = new System.Drawing.Size(653, 581);
-            this.Name = "Form1";
+            this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Catalogo";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Catalogo Super Productos!";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,6 +113,7 @@
         private System.Windows.Forms.Button buttonBuscarArticulo;
         private System.Windows.Forms.Button buttonAgregarArticulo;
         private System.Windows.Forms.Button buttonListarArticulos;
+        private System.Windows.Forms.Button buttonSalir;
     }
 }
 
