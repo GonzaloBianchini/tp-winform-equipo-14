@@ -6,16 +6,9 @@ using System.Threading.Tasks;
 
 namespace TP_2_Programacion3
 {
-    class Articulo
+    class Marca
     {
         int id;
-        string codigo;
-        string nombre;
         string descripcion;
-        Marca marca;
-        Categoria categoria;
-        float precio;
-
-        List<Imagen> imagenes;
     }
 }
