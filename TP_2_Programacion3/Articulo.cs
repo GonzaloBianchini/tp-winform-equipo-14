@@ -10,11 +10,12 @@ namespace TP_2_Programacion3
     {
         int id;
         string codigo;
-        //string nombre;
+        string nombre;
         string descripcion;
         Marca marca;
         Categoria categoria;
         float precio;
+        DateTime fechaalta;
 
         List<Imagen> imagenes;
     }

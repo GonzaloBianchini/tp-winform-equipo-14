@@ -39,7 +39,7 @@
             // labelCatalogoArticulos
             // 
             this.labelCatalogoArticulos.AutoSize = true;
-            this.labelCatalogoArticulos.Location = new System.Drawing.Point(238, 30);
+            this.labelCatalogoArticulos.Location = new System.Drawing.Point(208, 40);
             this.labelCatalogoArticulos.Name = "labelCatalogoArticulos";
             this.labelCatalogoArticulos.Size = new System.Drawing.Size(134, 16);
             this.labelCatalogoArticulos.TabIndex = 1;

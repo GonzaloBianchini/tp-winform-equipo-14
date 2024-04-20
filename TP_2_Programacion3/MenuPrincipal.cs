@@ -19,7 +19,7 @@ namespace TP_2_Programacion3
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            string textoAMostrar = "Bienvenid@ al catalogo de super productos!\n\nUltimo ingreso: " + DateTime.Now.ToString();
+            string textoAMostrar = "BIENVENIDOS AL CATALOGO DE PRODUCTOS\n\nUltimo ingreso: " + DateTime.Now.ToString();
             MessageBox.Show(textoAMostrar);
         }
 
