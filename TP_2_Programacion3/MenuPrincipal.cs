@@ -25,7 +25,8 @@ namespace TP_2_Programacion3
 
         private void buttonBuscarArticulo_Click(object sender, EventArgs e)
         {
-
+            MenuBuscarArticulo menuBuscarArticulo = new MenuBuscarArticulo();
+            menuBuscarArticulo.ShowDialog();
         }
 
         private void buttonAgregarArticulo_Click(object sender, EventArgs e)

@@ -57,6 +57,12 @@
     <Compile Include="MenuAgregarArticulo.Designer.cs">
       <DependentUpon>MenuAgregarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuBuscarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBuscarArticulo.Designer.cs">
+      <DependentUpon>MenuBuscarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
