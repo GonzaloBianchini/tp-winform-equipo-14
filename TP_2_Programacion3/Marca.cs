@@ -10,5 +10,6 @@ namespace TP_2_Programacion3
     {
         int id;
         string descripcion;
+        Imagen logoMarca;
     }
 }
