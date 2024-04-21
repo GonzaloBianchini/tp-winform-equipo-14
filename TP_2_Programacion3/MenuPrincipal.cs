@@ -17,12 +17,6 @@ namespace TP_2_Programacion3
             InitializeComponent();
         }
 
-        private void MenuPrincipal_Load(object sender, EventArgs e)
-        {
-            string textoAMostrar = "BIENVENIDOS AL CATALOGO DE PRODUCTOS\n\nUltimo ingreso: " + DateTime.Now.ToString();
-            MessageBox.Show(textoAMostrar);
-        }
-
         private void buttonBuscarArticulo_Click(object sender, EventArgs e)
         {
             MenuBuscarArticulo menuBuscarArticulo = new MenuBuscarArticulo();
@@ -43,9 +37,19 @@ namespace TP_2_Programacion3
 
         private void buttonSalir_Click(object sender, EventArgs e)
         {
-            string textoSalida = "Gracias por utilizar el super catalogo!";
+            string textoSalida = "GRACIAS POR UTILIZAR LA APP";
             MessageBox.Show(textoSalida);
             Close();    
+        }
+
+        private void labelCatalogoArticulos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

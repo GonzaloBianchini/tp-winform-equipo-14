@@ -83,6 +83,9 @@
     <EmbeddedResource Include="MenuAgregarArticulo.resx">
       <DependentUpon>MenuAgregarArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuBuscarArticulo.resx">
+      <DependentUpon>MenuBuscarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>

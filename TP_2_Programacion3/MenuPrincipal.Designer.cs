@@ -30,111 +30,114 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.labelCatalogoArticulos = new System.Windows.Forms.Label();
-            this.buttonBuscarArticulo = new System.Windows.Forms.Button();
-            this.buttonAgregarArticulo = new System.Windows.Forms.Button();
-            this.buttonListarArticulos = new System.Windows.Forms.Button();
-            this.buttonSalir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBuscarArticulo = new System.Windows.Forms.Button();
+            this.btnAgregarArticulo = new System.Windows.Forms.Button();
+            this.btnListarArticulos = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnModificarArticulo = new System.Windows.Forms.Button();
+            this.btnEliminarArticulo = new System.Windows.Forms.Button();
+            this.btnDetallesArticulo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelCatalogoArticulos
             // 
             this.labelCatalogoArticulos.AutoSize = true;
-            this.labelCatalogoArticulos.Location = new System.Drawing.Point(208, 40);
+            this.labelCatalogoArticulos.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCatalogoArticulos.Location = new System.Drawing.Point(147, 39);
             this.labelCatalogoArticulos.Name = "labelCatalogoArticulos";
-            this.labelCatalogoArticulos.Size = new System.Drawing.Size(134, 16);
+            this.labelCatalogoArticulos.Size = new System.Drawing.Size(320, 25);
             this.labelCatalogoArticulos.TabIndex = 1;
-            this.labelCatalogoArticulos.Text = "Catalogo de articulos";
+            this.labelCatalogoArticulos.Text = "CATALOGO DE ARTICULOS";
+            this.labelCatalogoArticulos.Click += new System.EventHandler(this.labelCatalogoArticulos_Click);
             // 
-            // buttonBuscarArticulo
+            // btnBuscarArticulo
             // 
-            this.buttonBuscarArticulo.Location = new System.Drawing.Point(68, 130);
-            this.buttonBuscarArticulo.Name = "buttonBuscarArticulo";
-            this.buttonBuscarArticulo.Size = new System.Drawing.Size(115, 71);
-            this.buttonBuscarArticulo.TabIndex = 2;
-            this.buttonBuscarArticulo.Text = "Buscar Articulo";
-            this.buttonBuscarArticulo.UseVisualStyleBackColor = true;
-            this.buttonBuscarArticulo.Click += new System.EventHandler(this.buttonBuscarArticulo_Click);
+            this.btnBuscarArticulo.Location = new System.Drawing.Point(68, 130);
+            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
+            this.btnBuscarArticulo.Size = new System.Drawing.Size(115, 71);
+            this.btnBuscarArticulo.TabIndex = 2;
+            this.btnBuscarArticulo.Text = "Buscar Articulo";
+            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
+            this.btnBuscarArticulo.Click += new System.EventHandler(this.buttonBuscarArticulo_Click);
             // 
-            // buttonAgregarArticulo
+            // btnAgregarArticulo
             // 
-            this.buttonAgregarArticulo.Location = new System.Drawing.Point(239, 130);
-            this.buttonAgregarArticulo.Name = "buttonAgregarArticulo";
-            this.buttonAgregarArticulo.Size = new System.Drawing.Size(115, 71);
-            this.buttonAgregarArticulo.TabIndex = 3;
-            this.buttonAgregarArticulo.Text = "Agregar Articulo";
-            this.buttonAgregarArticulo.UseVisualStyleBackColor = true;
-            this.buttonAgregarArticulo.Click += new System.EventHandler(this.buttonAgregarArticulo_Click);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(239, 130);
+            this.btnAgregarArticulo.Name = "btnAgregarArticulo";
+            this.btnAgregarArticulo.Size = new System.Drawing.Size(115, 71);
+            this.btnAgregarArticulo.TabIndex = 3;
+            this.btnAgregarArticulo.Text = "Agregar Articulo";
+            this.btnAgregarArticulo.UseVisualStyleBackColor = true;
+            this.btnAgregarArticulo.Click += new System.EventHandler(this.buttonAgregarArticulo_Click);
             // 
-            // buttonListarArticulos
+            // btnListarArticulos
             // 
-            this.buttonListarArticulos.Location = new System.Drawing.Point(398, 130);
-            this.buttonListarArticulos.Name = "buttonListarArticulos";
-            this.buttonListarArticulos.Size = new System.Drawing.Size(111, 71);
-            this.buttonListarArticulos.TabIndex = 4;
-            this.buttonListarArticulos.Text = "Listar Articulos";
-            this.buttonListarArticulos.UseVisualStyleBackColor = true;
-            this.buttonListarArticulos.Click += new System.EventHandler(this.buttonListarArticulos_Click);
+            this.btnListarArticulos.Location = new System.Drawing.Point(398, 130);
+            this.btnListarArticulos.Name = "btnListarArticulos";
+            this.btnListarArticulos.Size = new System.Drawing.Size(111, 71);
+            this.btnListarArticulos.TabIndex = 4;
+            this.btnListarArticulos.Text = "Listar Articulos";
+            this.btnListarArticulos.UseVisualStyleBackColor = true;
+            this.btnListarArticulos.Click += new System.EventHandler(this.buttonListarArticulos_Click);
             // 
-            // buttonSalir
+            // btnSalir
             // 
-            this.buttonSalir.Location = new System.Drawing.Point(230, 419);
-            this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(112, 30);
-            this.buttonSalir.TabIndex = 5;
-            this.buttonSalir.Text = "SALIR";
-            this.buttonSalir.UseVisualStyleBackColor = true;
-            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
+            this.btnSalir.Location = new System.Drawing.Point(230, 419);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(112, 30);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
-            // button1
+            // btnModificarArticulo
             // 
-            this.button1.Location = new System.Drawing.Point(70, 261);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 59);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Modificar Articulo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnModificarArticulo.Location = new System.Drawing.Point(70, 261);
+            this.btnModificarArticulo.Name = "btnModificarArticulo";
+            this.btnModificarArticulo.Size = new System.Drawing.Size(113, 59);
+            this.btnModificarArticulo.TabIndex = 6;
+            this.btnModificarArticulo.Text = "Modificar Articulo";
+            this.btnModificarArticulo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnEliminarArticulo
             // 
-            this.button2.Location = new System.Drawing.Point(239, 261);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 59);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Eliminar Articulo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(239, 261);
+            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
+            this.btnEliminarArticulo.Size = new System.Drawing.Size(115, 59);
+            this.btnEliminarArticulo.TabIndex = 7;
+            this.btnEliminarArticulo.Text = "Eliminar Articulo";
+            this.btnEliminarArticulo.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnDetallesArticulo
             // 
-            this.button3.Location = new System.Drawing.Point(398, 261);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 59);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Detalles de Articulos";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDetallesArticulo.Location = new System.Drawing.Point(398, 261);
+            this.btnDetallesArticulo.Name = "btnDetallesArticulo";
+            this.btnDetallesArticulo.Size = new System.Drawing.Size(111, 59);
+            this.btnDetallesArticulo.TabIndex = 8;
+            this.btnDetallesArticulo.Text = "Detalles de Articulos";
+            this.btnDetallesArticulo.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 534);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonSalir);
-            this.Controls.Add(this.buttonListarArticulos);
-            this.Controls.Add(this.buttonAgregarArticulo);
-            this.Controls.Add(this.buttonBuscarArticulo);
+            this.Controls.Add(this.btnDetallesArticulo);
+            this.Controls.Add(this.btnEliminarArticulo);
+            this.Controls.Add(this.btnModificarArticulo);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnListarArticulos);
+            this.Controls.Add(this.btnAgregarArticulo);
+            this.Controls.Add(this.btnBuscarArticulo);
             this.Controls.Add(this.labelCatalogoArticulos);
+            this.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(653, 581);
             this.MinimumSize = new System.Drawing.Size(653, 581);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Catalogo Super Productos!";
+            this.Text = "Super Catalogo";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,13 +146,13 @@
 
         #endregion
         private System.Windows.Forms.Label labelCatalogoArticulos;
-        private System.Windows.Forms.Button buttonBuscarArticulo;
-        private System.Windows.Forms.Button buttonAgregarArticulo;
-        private System.Windows.Forms.Button buttonListarArticulos;
-        private System.Windows.Forms.Button buttonSalir;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBuscarArticulo;
+        private System.Windows.Forms.Button btnAgregarArticulo;
+        private System.Windows.Forms.Button btnListarArticulos;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnModificarArticulo;
+        private System.Windows.Forms.Button btnEliminarArticulo;
+        private System.Windows.Forms.Button btnDetallesArticulo;
     }
 }
 
