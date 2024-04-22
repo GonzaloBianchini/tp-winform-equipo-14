@@ -22,6 +22,49 @@ namespace TP_2_Programacion3
             Close();
         }
 
-        
+        private void labelDescripcion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPrecio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNombreArticulo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCodigoArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMarca_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuAgregarArticulo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNombreArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace TP_2_Programacion3
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
