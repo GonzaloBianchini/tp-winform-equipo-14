@@ -50,7 +50,7 @@
             this.btnVolver.Location = new System.Drawing.Point(297, 332);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(112, 30);
-            this.btnVolver.TabIndex = 1;
+            this.btnVolver.TabIndex = 6;
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.buttonVolver_Click);
@@ -94,7 +94,7 @@
             this.comboBoxCategorias.Location = new System.Drawing.Point(534, 81);
             this.comboBoxCategorias.Name = "comboBoxCategorias";
             this.comboBoxCategorias.Size = new System.Drawing.Size(187, 24);
-            this.comboBoxCategorias.TabIndex = 4;
+            this.comboBoxCategorias.TabIndex = 1;
             // 
             // labelCategoria
             // 
@@ -131,7 +131,7 @@
             this.textBoxNombreArticulo.Location = new System.Drawing.Point(143, 84);
             this.textBoxNombreArticulo.Name = "textBoxNombreArticulo";
             this.textBoxNombreArticulo.Size = new System.Drawing.Size(189, 22);
-            this.textBoxNombreArticulo.TabIndex = 9;
+            this.textBoxNombreArticulo.TabIndex = 0;
             this.textBoxNombreArticulo.TextChanged += new System.EventHandler(this.textBoxNombreArticulo_TextChanged);
             // 
             // textBoxDescripcion
@@ -139,7 +139,7 @@
             this.textBoxDescripcion.Location = new System.Drawing.Point(145, 200);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(187, 22);
-            this.textBoxDescripcion.TabIndex = 11;
+            this.textBoxDescripcion.TabIndex = 4;
             // 
             // labelCodigoArticulo
             // 
@@ -156,12 +156,12 @@
             this.textBoxCodigoArticulo.Location = new System.Drawing.Point(534, 147);
             this.textBoxCodigoArticulo.Name = "textBoxCodigoArticulo";
             this.textBoxCodigoArticulo.Size = new System.Drawing.Size(187, 22);
-            this.textBoxCodigoArticulo.TabIndex = 13;
+            this.textBoxCodigoArticulo.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(189, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 29);
@@ -182,7 +182,7 @@
             this.txtBoxNroSerie.Location = new System.Drawing.Point(534, 206);
             this.txtBoxNroSerie.Name = "txtBoxNroSerie";
             this.txtBoxNroSerie.Size = new System.Drawing.Size(187, 22);
-            this.txtBoxNroSerie.TabIndex = 16;
+            this.txtBoxNroSerie.TabIndex = 5;
             // 
             // MenuAgregarArticulo
             // 
