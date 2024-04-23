@@ -8,7 +8,7 @@ namespace TP_2_Programacion3
 {
     class Categoria
     {
-        int id;
-        string descrpcion;
+        public int id {  get; set; }
+        public string descripcion {  get; set; }
     }
 }

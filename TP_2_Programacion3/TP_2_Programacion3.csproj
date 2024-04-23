@@ -70,16 +70,16 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListadoArticulos.cs">
+    <Compile Include="MenuListadoArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoArticulos.Designer.cs">
-      <DependentUpon>ListadoArticulos.cs</DependentUpon>
+    <Compile Include="MenuListadoArticulos.Designer.cs">
+      <DependentUpon>MenuListadoArticulos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ListadoArticulos.resx">
-      <DependentUpon>ListadoArticulos.cs</DependentUpon>
+    <EmbeddedResource Include="MenuListadoArticulos.resx">
+      <DependentUpon>MenuListadoArticulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuAgregarArticulo.resx">
       <DependentUpon>MenuAgregarArticulo.cs</DependentUpon>

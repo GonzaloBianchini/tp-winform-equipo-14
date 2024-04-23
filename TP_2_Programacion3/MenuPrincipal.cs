@@ -31,7 +31,7 @@ namespace TP_2_Programacion3
 
         private void buttonListarArticulos_Click(object sender, EventArgs e)
         {
-            ListadoArticulos listado = new ListadoArticulos();
+            MenuListadoArticulos listado = new MenuListadoArticulos();
             listado.ShowDialog();
         }
 

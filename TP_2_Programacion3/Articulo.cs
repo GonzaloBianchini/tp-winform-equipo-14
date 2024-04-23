@@ -14,10 +14,12 @@ namespace TP_2_Programacion3
         public string nombre {  get; set; }
         public string descripcion {  get; set; }
         public decimal precio {  get; set; }
-        //Marca marca;
-        //Categoria categoria;
-        //DateTime fechaalta {  get; set; }
 
-        //List<Imagen> imagenes;
+        public Marca marca {  get; set; }
+
+        public Categoria categoria {  get; set; }
+        public DateTime fechaAlta {  get; set; }
+
+        public List<Imagen> imagenes {  get; set; }
     }
 }

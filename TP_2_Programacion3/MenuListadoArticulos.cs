@@ -10,19 +10,22 @@ using System.Windows.Forms;
 
 namespace TP_2_Programacion3
 {
-    public partial class ListadoArticulos : Form
+    public partial class MenuListadoArticulos : Form
     {
-        public ListadoArticulos()
+        private List<Articulo> listaArticulos;  //creo una lista de articulos para mostrar
+        public MenuListadoArticulos()
         {
             InitializeComponent();
         }
 
-
-
         private void ListadoArticulos_Load(object sender, EventArgs e)
         {
             DataManager dataManager = new DataManager();
-            dataGridViewListadoArticulos.DataSource = dataManager.listarArticulos();
+            listaArticulos = dataManager.listarArticulos();
+
+            dataGridViewListadoArticulos.DataSource = listaArticulos;
+            //prueba imagen
+            pictureBoxImagenesArticulos.Load("https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542");
         }
  
 
@@ -31,6 +34,6 @@ namespace TP_2_Programacion3
             Close();
         }
 
-        
+       
     }
 }

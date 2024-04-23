@@ -8,9 +8,9 @@ namespace TP_2_Programacion3
 {
     class Marca
     {
-        int id;
-        string descripcion;
-        Imagen logoMarca;
-        Imagen logoMarca2;
+        public int id {  get; set; }
+        public string descripcion {  get; set; }
+        public Imagen logoMarca {  get; set; }
+        public Imagen logoMarca2 {  get; set; }
     }
 }

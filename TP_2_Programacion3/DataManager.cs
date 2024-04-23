@@ -25,10 +25,10 @@ namespace TP_2_Programacion3
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 //ahora va la sentencia SQL
-                string sentenciaTablaArticulos = "SELECT Id, Codigo,Nombre,Descripcion,Precio FROM ARTICULOS";
+                string queryTablaArticulos = "SELECT Id, Codigo,Nombre,Descripcion,Precio FROM ARTICULOS";
                 //faltan IdMarca,IdCategoria,Marca,FechaAlta,Categoria
 
-                cmd.CommandText = sentenciaTablaArticulos;
+                cmd.CommandText = queryTablaArticulos;
 
                 cmd.Connection = conn;
                 conn.Open();
@@ -44,6 +44,9 @@ namespace TP_2_Programacion3
                     aux.nombre = (string)reader["Nombre"];
                     aux.descripcion = (string)reader["Descripcion"];
                     aux.precio = (decimal)reader["Precio"];
+
+                    //prueba imagen
+                    
 
                     lista.Add(aux);
                 }

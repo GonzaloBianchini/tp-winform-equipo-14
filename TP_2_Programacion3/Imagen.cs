@@ -9,9 +9,7 @@ namespace TP_2_Programacion3
 {
     class Imagen
     {
-        int id;
-        string imagenURL;
-        //existe el tipo URL?
-        //Url Url;
+        public int id {  get; set; }
+        public string imagenURL {  get; set; }
     }
 }
