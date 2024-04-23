@@ -17,24 +17,20 @@ namespace TP_2_Programacion3
             InitializeComponent();
         }
 
-        private void buttonVolver_Click(object sender, EventArgs e)
+
+
+        private void ListadoArticulos_Load(object sender, EventArgs e)
+        {
+            DataManager dataManager = new DataManager();
+            dataGridViewListadoArticulos.DataSource = dataManager.listarArticulos();
+        }
+ 
+
+        private void btnVolver_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        
     }
 }

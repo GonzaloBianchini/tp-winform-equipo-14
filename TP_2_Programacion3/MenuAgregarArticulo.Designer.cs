@@ -173,7 +173,7 @@
             this.btnNroSerie.AutoSize = true;
             this.btnNroSerie.Location = new System.Drawing.Point(411, 206);
             this.btnNroSerie.Name = "btnNroSerie";
-            this.btnNroSerie.Size = new System.Drawing.Size(80, 20);
+            this.btnNroSerie.Size = new System.Drawing.Size(64, 16);
             this.btnNroSerie.TabIndex = 15;
             this.btnNroSerie.Text = "Nro Serie";
             // 
@@ -188,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 389);
+            this.ClientSize = new System.Drawing.Size(780, 391);
             this.Controls.Add(this.txtBoxNroSerie);
             this.Controls.Add(this.btnNroSerie);
             this.Controls.Add(this.label1);
