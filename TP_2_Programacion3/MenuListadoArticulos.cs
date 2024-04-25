@@ -8,7 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TP_2_Programacion3
+using Dominio;
+using DataManager;
+
+
+namespace WinFormPantallas
 {
     public partial class MenuListadoArticulos : Form
     {
@@ -20,10 +24,14 @@ namespace TP_2_Programacion3
 
         private void ListadoArticulos_Load(object sender, EventArgs e)
         {
-            DataManager dataManager = new DataManager();
-            listaArticulos = dataManager.listarArticulos();
+            //Datos dataManager = new Datos();
+            //listaArticulos = dataManager.listarArticulos();
 
-            dataGridViewListadoArticulos.DataSource = listaArticulos;
+            //dataGridViewListadoArticulos.DataSource = listaArticulos;
+            ArticuloManager arti = new ArticuloManager();
+            dataGridViewListadoArticulos.DataSource=arti.Listar();
+
+
             //prueba imagen
             pictureBoxImagenesArticulos.Load("https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542");
         }

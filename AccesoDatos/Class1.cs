@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP_2_Programacion3
+namespace AccesoDatos
 {
-    class Categoria
+    public class Class1
     {
-        public int id {  get; set; }
-        public string descripcion {  get; set; }
     }
 }

@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP_2_Programacion3
+namespace Dominio
 {
-    class Articulo
+    public class Articulo
     {
         public int id { get; set; }
         public string codigo { get; set; }

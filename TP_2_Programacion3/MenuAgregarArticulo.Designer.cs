@@ -1,4 +1,4 @@
-﻿namespace TP_2_Programacion3
+﻿namespace WinFormPantallas
 {
     partial class MenuAgregarArticulo
     {

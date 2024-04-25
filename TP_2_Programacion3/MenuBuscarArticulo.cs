@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TP_2_Programacion3
+using Dominio;
+
+namespace WinFormPantallas
 {
     public partial class MenuBuscarArticulo : Form
     {

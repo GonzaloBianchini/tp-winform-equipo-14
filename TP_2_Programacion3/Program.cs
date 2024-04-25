@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TP_2_Programacion3
+
+namespace WinFormPantallas
 {
     internal static class Program
     {
