@@ -41,13 +41,14 @@
             this.labelCodigoArticulo = new System.Windows.Forms.Label();
             this.textBoxCodigoArticulo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnNroSerie = new System.Windows.Forms.Label();
-            this.txtBoxNroSerie = new System.Windows.Forms.TextBox();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.textBoxPrecio = new System.Windows.Forms.TextBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(297, 332);
+            this.btnVolver.Location = new System.Drawing.Point(414, 318);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(112, 30);
             this.btnVolver.TabIndex = 6;
@@ -128,7 +129,7 @@
             // 
             // textBoxNombreArticulo
             // 
-            this.textBoxNombreArticulo.Location = new System.Drawing.Point(143, 84);
+            this.textBoxNombreArticulo.Location = new System.Drawing.Point(534, 206);
             this.textBoxNombreArticulo.Name = "textBoxNombreArticulo";
             this.textBoxNombreArticulo.Size = new System.Drawing.Size(189, 22);
             this.textBoxNombreArticulo.TabIndex = 0;
@@ -136,7 +137,7 @@
             // 
             // textBoxDescripcion
             // 
-            this.textBoxDescripcion.Location = new System.Drawing.Point(145, 200);
+            this.textBoxDescripcion.Location = new System.Drawing.Point(145, 87);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(187, 22);
             this.textBoxDescripcion.TabIndex = 4;
@@ -144,7 +145,7 @@
             // labelCodigoArticulo
             // 
             this.labelCodigoArticulo.AutoSize = true;
-            this.labelCodigoArticulo.Location = new System.Drawing.Point(411, 153);
+            this.labelCodigoArticulo.Location = new System.Drawing.Point(411, 145);
             this.labelCodigoArticulo.Name = "labelCodigoArticulo";
             this.labelCodigoArticulo.Size = new System.Drawing.Size(98, 16);
             this.labelCodigoArticulo.TabIndex = 12;
@@ -168,29 +169,40 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "CARGA DE ARTICULOS";
             // 
-            // btnNroSerie
+            // labelNombre
             // 
-            this.btnNroSerie.AutoSize = true;
-            this.btnNroSerie.Location = new System.Drawing.Point(411, 206);
-            this.btnNroSerie.Name = "btnNroSerie";
-            this.btnNroSerie.Size = new System.Drawing.Size(64, 16);
-            this.btnNroSerie.TabIndex = 15;
-            this.btnNroSerie.Text = "Nro Serie";
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.Location = new System.Drawing.Point(411, 206);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(56, 16);
+            this.labelNombre.TabIndex = 15;
+            this.labelNombre.Text = "Nombre";
             // 
-            // txtBoxNroSerie
+            // textBoxPrecio
             // 
-            this.txtBoxNroSerie.Location = new System.Drawing.Point(534, 206);
-            this.txtBoxNroSerie.Name = "txtBoxNroSerie";
-            this.txtBoxNroSerie.Size = new System.Drawing.Size(187, 22);
-            this.txtBoxNroSerie.TabIndex = 5;
+            this.textBoxPrecio.Location = new System.Drawing.Point(145, 200);
+            this.textBoxPrecio.Name = "textBoxPrecio";
+            this.textBoxPrecio.Size = new System.Drawing.Size(187, 22);
+            this.textBoxPrecio.TabIndex = 5;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(211, 318);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(92, 30);
+            this.btnAceptar.TabIndex = 16;
+            this.btnAceptar.Text = "ACEPTAR";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // MenuAgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 391);
-            this.Controls.Add(this.txtBoxNroSerie);
-            this.Controls.Add(this.btnNroSerie);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.textBoxPrecio);
+            this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxCodigoArticulo);
             this.Controls.Add(this.labelCodigoArticulo);
@@ -228,7 +240,8 @@
         private System.Windows.Forms.Label labelCodigoArticulo;
         private System.Windows.Forms.TextBox textBoxCodigoArticulo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label btnNroSerie;
-        private System.Windows.Forms.TextBox txtBoxNroSerie;
+        private System.Windows.Forms.Label labelNombre;
+        private System.Windows.Forms.TextBox textBoxPrecio;
+        private System.Windows.Forms.Button btnAceptar;
     }
 }

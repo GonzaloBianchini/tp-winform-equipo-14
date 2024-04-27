@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Dominio;
+using DataManager;
 
 namespace WinFormPantallas
 {
@@ -67,6 +68,28 @@ namespace WinFormPantallas
         private void labelNombreArticulo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Articulo articuloNuevo = new Articulo();
+            ArticuloManager artMana = new ArticuloManager();   
+            try
+            {
+                articuloNuevo.descripcion=textBoxDescripcion.Text;
+                articuloNuevo.precio = decimal.Parse(textBoxPrecio.Text);   //HAY QUE VALIDAR ESTO POR SI NO SE INTRODUCE UN VALOR DECIMAL
+                articuloNuevo.codigo=textBoxCodigoArticulo.Text;
+                articuloNuevo.nombre=textBoxNombreArticulo.Text;
+                //validarDatos();       // HACER ESTA FUNCION?
+                //falta marca
+                //falta categoria
+                //falta imagenes
+                artMana.agregar(articuloNuevo);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

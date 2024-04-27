@@ -45,5 +45,24 @@ namespace DataManager
 
 
         }
+
+        public void agregar(Articulo artNue)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.SetearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, Precio)VALUES('" + artNue.codigo + "','" + artNue.nombre + "','" + artNue.descripcion + "',"+ artNue.precio +")");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex) 
+            {
+                throw ex; 
+            }
+            finally 
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
