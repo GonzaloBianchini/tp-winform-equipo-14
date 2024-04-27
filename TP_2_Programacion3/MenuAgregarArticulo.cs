@@ -85,6 +85,7 @@ namespace WinFormPantallas
                 //falta categoria
                 //falta imagenes
                 artMana.agregar(articuloNuevo);
+                MessageBox.Show("Articulo Agregado!");
             }
             catch(Exception ex)
             {
