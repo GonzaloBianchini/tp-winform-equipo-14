@@ -35,6 +35,7 @@
             this.pictureBoxImagenesArticulos = new System.Windows.Forms.PictureBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonFront = new System.Windows.Forms.Button();
+            this.btnAgregarArticulo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenesArticulos)).BeginInit();
             this.SuspendLayout();
@@ -62,10 +63,13 @@
             // dataGridViewListadoArticulos
             // 
             this.dataGridViewListadoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListadoArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewListadoArticulos.Location = new System.Drawing.Point(12, 95);
+            this.dataGridViewListadoArticulos.MultiSelect = false;
             this.dataGridViewListadoArticulos.Name = "dataGridViewListadoArticulos";
             this.dataGridViewListadoArticulos.RowHeadersWidth = 51;
             this.dataGridViewListadoArticulos.RowTemplate.Height = 24;
+            this.dataGridViewListadoArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewListadoArticulos.Size = new System.Drawing.Size(875, 283);
             this.dataGridViewListadoArticulos.TabIndex = 4;
             this.dataGridViewListadoArticulos.SelectionChanged += new System.EventHandler(this.dataGridViewListadoArticulos_SelectionChanged);
@@ -103,12 +107,23 @@
             this.buttonFront.Text = ">";
             this.buttonFront.UseVisualStyleBackColor = true;
             // 
+            // btnAgregarArticulo
+            // 
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(12, 384);
+            this.btnAgregarArticulo.Name = "btnAgregarArticulo";
+            this.btnAgregarArticulo.Size = new System.Drawing.Size(115, 31);
+            this.btnAgregarArticulo.TabIndex = 8;
+            this.btnAgregarArticulo.Text = "Agregar Articulo";
+            this.btnAgregarArticulo.UseVisualStyleBackColor = true;
+            this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
+            // 
             // MenuListadoArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1247, 544);
+            this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.buttonFront);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.pictureBoxImagenesArticulos);
@@ -135,5 +150,6 @@
         private System.Windows.Forms.PictureBox pictureBoxImagenesArticulos;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonFront;
+        private System.Windows.Forms.Button btnAgregarArticulo;
     }
 }

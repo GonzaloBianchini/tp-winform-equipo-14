@@ -24,6 +24,11 @@ namespace WinFormPantallas
 
         private void ListadoArticulos_Load(object sender, EventArgs e)
         {
+            cargar();
+        }
+
+        private void cargar()
+        {
             ArticuloManager arti = new ArticuloManager();
 
             listaArticulos = arti.Listar();
@@ -32,20 +37,20 @@ namespace WinFormPantallas
 
             dataGridViewListadoArticulos.Columns["Id"].Visible = false;
 
+            cargarImagen(listaArticulos[0].ImagenUrl);
+        }
+
+        private void cargarImagen(string URL)
+        {
             try
             {
-                pictureBoxImagenesArticulos.Load(listaArticulos[0].ImagenURL);
+                pictureBoxImagenesArticulos.Load(URL);
             }
             catch(Exception ex)
             {
                 pictureBoxImagenesArticulos.Load("https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=");
             }
-
-
-            //prueba imagen
-            pictureBoxImagenesArticulos.Load("https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542");
         }
- 
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
@@ -57,12 +62,18 @@ namespace WinFormPantallas
             Articulo artSeleccionado =(Articulo) dataGridViewListadoArticulos.CurrentRow.DataBoundItem;
             try
             {
-                pictureBoxImagenesArticulos.Load(artSeleccionado.ImagenURL);
+                pictureBoxImagenesArticulos.Load(artSeleccionado.ImagenUrl);
             }
             catch(Exception ex)
             {
                 pictureBoxImagenesArticulos.Load("https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=");
             }
+        }
+
+        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            MenuAgregarArticulo menuAgregarArticulo = new MenuAgregarArticulo();
+            menuAgregarArticulo.ShowDialog();
         }
     }
 }

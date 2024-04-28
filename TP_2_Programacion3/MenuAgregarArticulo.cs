@@ -64,6 +64,7 @@ namespace WinFormPantallas
                 articuloNuevo.nombre=textBoxNombreArticulo.Text;
                 articuloNuevo.categoria = (Categoria)comboBoxCategorias.SelectedItem;
                 articuloNuevo.marca=(Marca)comboBoxMarcas.SelectedItem;
+                articuloNuevo.ImagenUrl = textBoxURL.Text;
                 //validarDatos();       // HACER ESTA FUNCION?
                 
                 //falta imagenes
@@ -73,6 +74,24 @@ namespace WinFormPantallas
             catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void textBoxURL_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(textBoxURL.Text);
+        }
+
+
+        private void cargarImagen(string URL)
+        {
+            try
+            {
+                pictureBoxPreviewImagen.Load(URL);
+            }
+            catch (Exception ex)
+            {
+                pictureBoxPreviewImagen.Load("https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=");
             }
         }
     }

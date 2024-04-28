@@ -25,11 +25,6 @@ namespace WinFormPantallas
             menuBuscarArticulo.ShowDialog();
         }
 
-        private void buttonAgregarArticulo_Click(object sender, EventArgs e)
-        {
-            MenuAgregarArticulo menuAgregarArticulo = new MenuAgregarArticulo();
-            menuAgregarArticulo.ShowDialog();
-        }
 
         private void buttonListarArticulos_Click(object sender, EventArgs e)
         {
@@ -44,10 +39,7 @@ namespace WinFormPantallas
             Close();    
         }
 
-        private void labelCatalogoArticulos_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.labelCatalogoArticulos = new System.Windows.Forms.Label();
             this.btnBuscarArticulo = new System.Windows.Forms.Button();
-            this.btnAgregarArticulo = new System.Windows.Forms.Button();
             this.btnListarArticulos = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
@@ -48,7 +47,6 @@
             this.labelCatalogoArticulos.Size = new System.Drawing.Size(320, 25);
             this.labelCatalogoArticulos.TabIndex = 1;
             this.labelCatalogoArticulos.Text = "CATALOGO DE ARTICULOS";
-            this.labelCatalogoArticulos.Click += new System.EventHandler(this.labelCatalogoArticulos_Click);
             // 
             // btnBuscarArticulo
             // 
@@ -59,16 +57,6 @@
             this.btnBuscarArticulo.Text = "Buscar Articulo";
             this.btnBuscarArticulo.UseVisualStyleBackColor = true;
             this.btnBuscarArticulo.Click += new System.EventHandler(this.buttonBuscarArticulo_Click);
-            // 
-            // btnAgregarArticulo
-            // 
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(239, 130);
-            this.btnAgregarArticulo.Name = "btnAgregarArticulo";
-            this.btnAgregarArticulo.Size = new System.Drawing.Size(115, 71);
-            this.btnAgregarArticulo.TabIndex = 3;
-            this.btnAgregarArticulo.Text = "Agregar Articulo";
-            this.btnAgregarArticulo.UseVisualStyleBackColor = true;
-            this.btnAgregarArticulo.Click += new System.EventHandler(this.buttonAgregarArticulo_Click);
             // 
             // btnListarArticulos
             // 
@@ -127,7 +115,6 @@
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnListarArticulos);
-            this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.btnBuscarArticulo);
             this.Controls.Add(this.labelCatalogoArticulos);
             this.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
@@ -147,7 +134,6 @@
         #endregion
         private System.Windows.Forms.Label labelCatalogoArticulos;
         private System.Windows.Forms.Button btnBuscarArticulo;
-        private System.Windows.Forms.Button btnAgregarArticulo;
         private System.Windows.Forms.Button btnListarArticulos;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnModificarArticulo;
