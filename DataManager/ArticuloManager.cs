@@ -41,9 +41,6 @@ namespace DataManager
             {
                 datos.cerrarConexion();
             }
-           
-
-
         }
 
         public void agregar(Articulo artNue)
@@ -63,6 +60,11 @@ namespace DataManager
             {
                 datos.cerrarConexion();
             }
+        }
+
+        public void modificar(Articulo artExistente)
+        {
+
         }
     }
 }
