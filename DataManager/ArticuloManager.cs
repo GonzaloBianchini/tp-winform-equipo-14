@@ -15,7 +15,7 @@ namespace DataManager
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("SELECT ARTICULOS.Id AS Id,ARTICULOS.Codigo AS Codigo,ARTICULOS.Nombre AS Nombre,ARTICULOS.Descripcion AS Descripcion,Articulos. Precio AS Precio,MARCAS.Descripcion AS Marca,CATEGORIAS.Descripcion AS Categoria FROM ARTICULOS\r\nINNER JOIN MARCAS ON MARCAS.Id=ARTICULOS.IdMarca\r\nINNER JOIN CATEGORIAS ON CATEGORIAS.Id=ARTICULOS.IdCategoria");
+                datos.SetearConsulta("SELECT ARTICULOS.Id AS Id,ARTICULOS.Codigo AS Codigo,ARTICULOS.Nombre AS Nombre,ARTICULOS.Descripcion AS Descripcion,Articulos. Precio AS Precio,MARCAS.Descripcion AS Marca,CATEGORIAS.Descripcion AS Categoria,IMAGENES.ImagenUrl AS ImagenURL FROM ARTICULOS INNER JOIN MARCAS ON MARCAS.Id=ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id=ARTICULOS.IdCategoria INNER JOIN IMAGENES ON IMAGENES.IdArticulo=ARTICULOS.Id");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())
@@ -30,6 +30,7 @@ namespace DataManager
                     aux.marca.descripcion =(string) datos.Lector["Marca"];
                     aux.categoria=new Categoria();  ////instancio el objeto interno para evitar la null reference
                     aux.categoria.descripcion = (string)datos.Lector["Categoria"];
+                    aux.ImagenURL = (string)datos.Lector["ImagenURL"];
 
                     lista.Add(aux);
                 }

@@ -18,7 +18,8 @@ namespace Dominio
         public Marca marca {  get; set; }
 
         public Categoria categoria {  get; set; }
-        //public DateTime fechaAlta {  get; set; }
+        
+        public string ImagenURL {  get; set; }
 
         public List<Imagen> imagenes {  get; set; }
     }
