@@ -60,9 +60,13 @@ namespace DataManager
             }
         }
 
+        public void setearParametro(string parametro,object valor)
+        {
+            comando.Parameters.AddWithValue(parametro, valor);
+        }
         public void cerrarConexion()
         {
-            if(lector != null)
+            if (lector != null)
                 lector.Close();
             conexion.Close();
         }

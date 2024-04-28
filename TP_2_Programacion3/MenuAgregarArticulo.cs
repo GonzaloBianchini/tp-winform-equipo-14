@@ -25,49 +25,31 @@ namespace WinFormPantallas
             Close();
         }
 
-        private void labelDescripcion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelCategoria_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelPrecio_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBoxNombreArticulo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxMarcas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelCodigoArticulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelMarca_Click(object sender, EventArgs e)
         {
 
         }
 
         private void MenuAgregarArticulo_Load(object sender, EventArgs e)
         {
+            CategoriaManager catNue = new CategoriaManager();
+            MarcaManager marcaNue = new MarcaManager();
+            try
+            {
+                comboBoxCategorias.DataSource = catNue.Listar();
+                comboBoxCategorias.DisplayMember = "Descripcion";
 
-        }
+                comboBoxMarcas.DataSource = marcaNue.Listar();
+                comboBoxMarcas.DisplayMember = "Descripcion";
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
 
-        private void labelNombreArticulo_Click(object sender, EventArgs e)
-        {
-
+            }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -80,9 +62,10 @@ namespace WinFormPantallas
                 articuloNuevo.precio = decimal.Parse(textBoxPrecio.Text);   //HAY QUE VALIDAR ESTO POR SI NO SE INTRODUCE UN VALOR DECIMAL
                 articuloNuevo.codigo=textBoxCodigoArticulo.Text;
                 articuloNuevo.nombre=textBoxNombreArticulo.Text;
+                articuloNuevo.categoria = (Categoria)comboBoxCategorias.SelectedItem;
+                articuloNuevo.marca=(Marca)comboBoxMarcas.SelectedItem;
                 //validarDatos();       // HACER ESTA FUNCION?
-                //falta marca
-                //falta categoria
+                
                 //falta imagenes
                 artMana.agregar(articuloNuevo);
                 MessageBox.Show("Articulo Agregado!");

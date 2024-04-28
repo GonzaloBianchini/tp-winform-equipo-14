@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAgregarArticulo));
             this.btnVolver = new System.Windows.Forms.Button();
-            this.comboBoxMarcas = new System.Windows.Forms.ComboBox();
             this.labelMarca = new System.Windows.Forms.Label();
-            this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
             this.labelCategoria = new System.Windows.Forms.Label();
             this.labelPrecio = new System.Windows.Forms.Label();
             this.labelDescripcion = new System.Windows.Forms.Label();
@@ -44,6 +42,8 @@
             this.labelNombre = new System.Windows.Forms.Label();
             this.textBoxPrecio = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.comboBoxMarcas = new System.Windows.Forms.ComboBox();
+            this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -56,23 +56,6 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.buttonVolver_Click);
             // 
-            // comboBoxMarcas
-            // 
-            this.comboBoxMarcas.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBoxMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxMarcas.FormattingEnabled = true;
-            this.comboBoxMarcas.Items.AddRange(new object[] {
-            "Apple",
-            "Sony",
-            "Samsung",
-            "Huawei",
-            "Motorola"});
-            this.comboBoxMarcas.Location = new System.Drawing.Point(145, 145);
-            this.comboBoxMarcas.Name = "comboBoxMarcas";
-            this.comboBoxMarcas.Size = new System.Drawing.Size(187, 24);
-            this.comboBoxMarcas.TabIndex = 2;
-            this.comboBoxMarcas.SelectedIndexChanged += new System.EventHandler(this.comboBoxMarcas_SelectedIndexChanged);
-            // 
             // labelMarca
             // 
             this.labelMarca.AutoSize = true;
@@ -81,21 +64,6 @@
             this.labelMarca.Size = new System.Drawing.Size(45, 16);
             this.labelMarca.TabIndex = 3;
             this.labelMarca.Text = "Marca";
-            this.labelMarca.Click += new System.EventHandler(this.labelMarca_Click);
-            // 
-            // comboBoxCategorias
-            // 
-            this.comboBoxCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCategorias.FormattingEnabled = true;
-            this.comboBoxCategorias.Items.AddRange(new object[] {
-            "Celulares",
-            "Televisores",
-            "Media",
-            "Audio"});
-            this.comboBoxCategorias.Location = new System.Drawing.Point(534, 81);
-            this.comboBoxCategorias.Name = "comboBoxCategorias";
-            this.comboBoxCategorias.Size = new System.Drawing.Size(187, 24);
-            this.comboBoxCategorias.TabIndex = 1;
             // 
             // labelCategoria
             // 
@@ -105,7 +73,6 @@
             this.labelCategoria.Size = new System.Drawing.Size(66, 16);
             this.labelCategoria.TabIndex = 5;
             this.labelCategoria.Text = "Categoria";
-            this.labelCategoria.Click += new System.EventHandler(this.labelCategoria_Click);
             // 
             // labelPrecio
             // 
@@ -115,7 +82,6 @@
             this.labelPrecio.Size = new System.Drawing.Size(46, 16);
             this.labelPrecio.TabIndex = 7;
             this.labelPrecio.Text = "Precio";
-            this.labelPrecio.Click += new System.EventHandler(this.labelPrecio_Click);
             // 
             // labelDescripcion
             // 
@@ -125,7 +91,6 @@
             this.labelDescripcion.Size = new System.Drawing.Size(79, 16);
             this.labelDescripcion.TabIndex = 8;
             this.labelDescripcion.Text = "Descripcion";
-            this.labelDescripcion.Click += new System.EventHandler(this.labelDescripcion_Click);
             // 
             // textBoxNombreArticulo
             // 
@@ -150,7 +115,6 @@
             this.labelCodigoArticulo.Size = new System.Drawing.Size(98, 16);
             this.labelCodigoArticulo.TabIndex = 12;
             this.labelCodigoArticulo.Text = "Codigo Articulo";
-            this.labelCodigoArticulo.Click += new System.EventHandler(this.labelCodigoArticulo_Click);
             // 
             // textBoxCodigoArticulo
             // 
@@ -195,11 +159,31 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // comboBoxMarcas
+            // 
+            this.comboBoxMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMarcas.FormattingEnabled = true;
+            this.comboBoxMarcas.Location = new System.Drawing.Point(145, 144);
+            this.comboBoxMarcas.Name = "comboBoxMarcas";
+            this.comboBoxMarcas.Size = new System.Drawing.Size(187, 24);
+            this.comboBoxMarcas.TabIndex = 17;
+            // 
+            // comboBoxCategorias
+            // 
+            this.comboBoxCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCategorias.FormattingEnabled = true;
+            this.comboBoxCategorias.Location = new System.Drawing.Point(534, 76);
+            this.comboBoxCategorias.Name = "comboBoxCategorias";
+            this.comboBoxCategorias.Size = new System.Drawing.Size(187, 24);
+            this.comboBoxCategorias.TabIndex = 18;
+            // 
             // MenuAgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 391);
+            this.Controls.Add(this.comboBoxCategorias);
+            this.Controls.Add(this.comboBoxMarcas);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.textBoxPrecio);
             this.Controls.Add(this.labelNombre);
@@ -211,9 +195,7 @@
             this.Controls.Add(this.labelDescripcion);
             this.Controls.Add(this.labelPrecio);
             this.Controls.Add(this.labelCategoria);
-            this.Controls.Add(this.comboBoxCategorias);
             this.Controls.Add(this.labelMarca);
-            this.Controls.Add(this.comboBoxMarcas);
             this.Controls.Add(this.btnVolver);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -229,9 +211,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.ComboBox comboBoxMarcas;
         private System.Windows.Forms.Label labelMarca;
-        private System.Windows.Forms.ComboBox comboBoxCategorias;
         private System.Windows.Forms.Label labelCategoria;
         private System.Windows.Forms.Label labelPrecio;
         private System.Windows.Forms.Label labelDescripcion;
@@ -243,5 +223,7 @@
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.TextBox textBoxPrecio;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.ComboBox comboBoxMarcas;
+        private System.Windows.Forms.ComboBox comboBoxCategorias;
     }
 }

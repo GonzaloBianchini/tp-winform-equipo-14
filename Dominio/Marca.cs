@@ -10,7 +10,12 @@ namespace Dominio
     {
         public int id {  get; set; }
         public string descripcion {  get; set; }
-        public Imagen logoMarca {  get; set; }
-        public Imagen logoMarca2 {  get; set; }
+
+        public override string ToString()
+        {
+            return descripcion;
+        }
+
+
     }
 }

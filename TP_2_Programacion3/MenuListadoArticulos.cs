@@ -16,7 +16,7 @@ namespace WinFormPantallas
 {
     public partial class MenuListadoArticulos : Form
     {
-        private List<Articulo> listaArticulos;  //creo una lista de articulos para mostrar
+        //private List<Articulo> listaArticulos;  //creo una lista de articulos para mostrar
         public MenuListadoArticulos()
         {
             InitializeComponent();
@@ -24,10 +24,6 @@ namespace WinFormPantallas
 
         private void ListadoArticulos_Load(object sender, EventArgs e)
         {
-            //Datos dataManager = new Datos();
-            //listaArticulos = dataManager.listarArticulos();
-
-            //dataGridViewListadoArticulos.DataSource = listaArticulos;
             ArticuloManager arti = new ArticuloManager();
             dataGridViewListadoArticulos.DataSource=arti.Listar();
 
