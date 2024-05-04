@@ -59,21 +59,45 @@ namespace WinFormPantallas
 
         private void dataGridViewListadoArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo artSeleccionado =(Articulo) dataGridViewListadoArticulos.CurrentRow.DataBoundItem;
-            try
+            if(dataGridViewListadoArticulos.CurrentRow != null) //  valida que haya una fila seleccionada
             {
-                pictureBoxImagenesArticulos.Load(artSeleccionado.ImagenUrl);
+                Articulo artSeleccionado =(Articulo) dataGridViewListadoArticulos.CurrentRow.DataBoundItem;
+                try
+                {
+                    pictureBoxImagenesArticulos.Load(artSeleccionado.ImagenUrl);
+                }
+                catch(Exception ex)
+                {
+                    pictureBoxImagenesArticulos.Load("https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=");
+                }
+
             }
-            catch(Exception ex)
-            {
-                pictureBoxImagenesArticulos.Load("https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=");
-            }
+        
         }
 
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
             MenuAgregarArticulo menuAgregarArticulo = new MenuAgregarArticulo();
             menuAgregarArticulo.ShowDialog();
+            cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if(dataGridViewListadoArticulos.CurrentRow != null)
+            {
+                Articulo artSeleccionado = (Articulo)dataGridViewListadoArticulos.CurrentRow.DataBoundItem;
+                MenuAgregarArticulo menuModificarArticulo = new MenuAgregarArticulo(artSeleccionado);
+                menuModificarArticulo.ShowDialog();
+                cargar();
+               
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un articulo para modificar");
+            }
+
+
         }
     }
 }

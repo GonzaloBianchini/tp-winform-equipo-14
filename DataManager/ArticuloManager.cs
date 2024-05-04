@@ -83,6 +83,7 @@ namespace DataManager
 
         public void modificar(Articulo artExistente)
         {
+            
 
         }
     }

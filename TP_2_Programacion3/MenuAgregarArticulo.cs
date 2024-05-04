@@ -15,9 +15,16 @@ namespace WinFormPantallas
 {
     public partial class MenuAgregarArticulo : Form
     {
+        private Articulo articuloSeleccionado = null;  
         public MenuAgregarArticulo()
         {
             InitializeComponent();
+        }
+
+        public MenuAgregarArticulo( Articulo articuloSeleccionado)
+        {
+            InitializeComponent();
+            this.articuloSeleccionado = articuloSeleccionado;
         }
 
         private void buttonVolver_Click(object sender, EventArgs e)
@@ -32,6 +39,8 @@ namespace WinFormPantallas
 
         private void MenuAgregarArticulo_Load(object sender, EventArgs e)
         {
+            AccesoDatos datos = new AccesoDatos(); // creo un objeto de acceso a datos
+
             CategoriaManager catNue = new CategoriaManager();
             MarcaManager marcaNue = new MarcaManager();
             try
@@ -41,6 +50,20 @@ namespace WinFormPantallas
 
                 comboBoxMarcas.DataSource = marcaNue.Listar();
                 comboBoxMarcas.DisplayMember = "Descripcion";
+
+                if(articuloSeleccionado != null)
+                {
+                    textBoxNombreArticulo.Text = articuloSeleccionado.nombre;
+                    textBoxDescripcion.Text = articuloSeleccionado.descripcion;
+                    textBoxPrecio.Text = articuloSeleccionado.precio.ToString();
+                    textBoxCodigoArticulo.Text = articuloSeleccionado.codigo;
+                    comboBoxCategorias.SelectedItem = articuloSeleccionado.categoria;
+                    comboBoxMarcas.SelectedItem = articuloSeleccionado.marca;
+                    textBoxURL.Text = articuloSeleccionado.ImagenUrl;
+                    cargarImagen(articuloSeleccionado.ImagenUrl);
+                }
+               
+
             }
             catch(Exception ex) 
             {
@@ -48,7 +71,8 @@ namespace WinFormPantallas
             }
             finally
             {
-
+                datos.cerrarConexion();
+               
             }
         }
 

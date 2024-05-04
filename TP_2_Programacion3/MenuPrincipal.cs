@@ -19,6 +19,8 @@ namespace WinFormPantallas
             InitializeComponent();
         }
 
+
+        //Boton para agregar un nuevo articulo
         private void buttonBuscarArticulo_Click(object sender, EventArgs e)
         {
             MenuBuscarArticulo menuBuscarArticulo = new MenuBuscarArticulo();
@@ -26,12 +28,15 @@ namespace WinFormPantallas
         }
 
 
+        // Boton para listar los articulos
         private void buttonListarArticulos_Click(object sender, EventArgs e)
         {
             MenuListadoArticulos listado = new MenuListadoArticulos();
             listado.ShowDialog();
         }
 
+
+        // Boton para salir de la aplicacion
         private void buttonSalir_Click(object sender, EventArgs e)
         {
             string textoSalida = "GRACIAS POR UTILIZAR LA APP";
@@ -40,10 +45,12 @@ namespace WinFormPantallas
         }
 
        
-
+         
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
 
+
         }
+
     }
 }
