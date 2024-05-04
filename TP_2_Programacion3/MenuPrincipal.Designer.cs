@@ -33,7 +33,6 @@
             this.btnBuscarArticulo = new System.Windows.Forms.Button();
             this.btnListarArticulos = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.btnDetallesArticulo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -81,19 +80,9 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
-            // btnEliminarArticulo
-            // 
-            this.btnEliminarArticulo.Location = new System.Drawing.Point(160, 212);
-            this.btnEliminarArticulo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
-            this.btnEliminarArticulo.Size = new System.Drawing.Size(86, 48);
-            this.btnEliminarArticulo.TabIndex = 7;
-            this.btnEliminarArticulo.Text = "Eliminar Articulo";
-            this.btnEliminarArticulo.UseVisualStyleBackColor = true;
-            // 
             // btnDetallesArticulo
             // 
-            this.btnDetallesArticulo.Location = new System.Drawing.Point(298, 212);
+            this.btnDetallesArticulo.Location = new System.Drawing.Point(187, 208);
             this.btnDetallesArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetallesArticulo.Name = "btnDetallesArticulo";
             this.btnDetallesArticulo.Size = new System.Drawing.Size(83, 48);
@@ -107,7 +96,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 440);
             this.Controls.Add(this.btnDetallesArticulo);
-            this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnListarArticulos);
             this.Controls.Add(this.btnBuscarArticulo);
@@ -132,7 +120,6 @@
         private System.Windows.Forms.Button btnBuscarArticulo;
         private System.Windows.Forms.Button btnListarArticulos;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnEliminarArticulo;
         private System.Windows.Forms.Button btnDetallesArticulo;
     }
 }

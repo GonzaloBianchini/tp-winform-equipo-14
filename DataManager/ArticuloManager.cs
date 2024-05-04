@@ -83,6 +83,46 @@ namespace DataManager
 
         public void modificar(Articulo artExistente)
         {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.SetearConsulta("UPDATE ARTICULOS SET Codigo = '" + artExistente.codigo + "', Nombre = '" + artExistente.nombre + "', Descripcion = '" + artExistente.descripcion + "', Precio = " + artExistente.precio + ", IdMarca = @IdMarca, IdCategoria = @IdCategoria WHERE Id = " + artExistente.id);
+                datos.setearParametro("@IdMarca", artExistente.marca.id);
+                datos.setearParametro("@IdCategoria", artExistente.categoria.id);
+                datos.ejecutarAccion();
+
+                //modifico la imagen
+                datos.SetearConsulta("UPDATE IMAGENES SET ImagenUrl = '" + artExistente.ImagenUrl + "' WHERE IdArticulo = " + artExistente.id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+            
+
+        }
+
+        public void eliminar(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.SetearConsulta("DELETE FROM ARTICULOS WHERE Id = @id" );
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
             
 
         }

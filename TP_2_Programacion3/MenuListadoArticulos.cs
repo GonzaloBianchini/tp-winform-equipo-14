@@ -99,5 +99,24 @@ namespace WinFormPantallas
 
 
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloManager articulo = new ArticuloManager();
+            Articulo Seleccionado;
+
+            try
+            {
+                Seleccionado = (Articulo)dataGridViewListadoArticulos.CurrentRow.DataBoundItem;
+                articulo.eliminar(Seleccionado.id);
+                cargar();   
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

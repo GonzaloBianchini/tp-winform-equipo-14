@@ -37,6 +37,7 @@
             this.buttonFront = new System.Windows.Forms.Button();
             this.btnAgregarArticulo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListadoArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenesArticulos)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             // btnVolver
             // 
             this.btnVolver.Location = new System.Drawing.Point(504, 312);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(161, 37);
             this.btnVolver.TabIndex = 3;
@@ -68,7 +69,7 @@
             this.dataGridViewListadoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListadoArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewListadoArticulos.Location = new System.Drawing.Point(9, 77);
-            this.dataGridViewListadoArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewListadoArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewListadoArticulos.MultiSelect = false;
             this.dataGridViewListadoArticulos.Name = "dataGridViewListadoArticulos";
             this.dataGridViewListadoArticulos.RowHeadersWidth = 51;
@@ -85,7 +86,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxImagenesArticulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxImagenesArticulos.Location = new System.Drawing.Point(696, 77);
-            this.pictureBoxImagenesArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxImagenesArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImagenesArticulos.Name = "pictureBoxImagenesArticulos";
             this.pictureBoxImagenesArticulos.Size = new System.Drawing.Size(193, 230);
             this.pictureBoxImagenesArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -96,7 +97,7 @@
             // 
             this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBack.Location = new System.Drawing.Point(696, 167);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(20, 37);
             this.buttonBack.TabIndex = 6;
@@ -107,7 +108,7 @@
             // 
             this.buttonFront.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFront.Location = new System.Drawing.Point(898, 167);
-            this.buttonFront.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonFront.Margin = new System.Windows.Forms.Padding(2);
             this.buttonFront.Name = "buttonFront";
             this.buttonFront.Size = new System.Drawing.Size(20, 37);
             this.buttonFront.TabIndex = 7;
@@ -117,7 +118,7 @@
             // btnAgregarArticulo
             // 
             this.btnAgregarArticulo.Location = new System.Drawing.Point(9, 312);
-            this.btnAgregarArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(114, 37);
             this.btnAgregarArticulo.TabIndex = 8;
@@ -136,12 +137,24 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(241, 312);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(110, 37);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar Articulo";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // MenuListadoArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(955, 360);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.buttonFront);
@@ -152,7 +165,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuListadoArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadoArticulos";
@@ -173,5 +186,6 @@
         private System.Windows.Forms.Button buttonFront;
         private System.Windows.Forms.Button btnAgregarArticulo;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
