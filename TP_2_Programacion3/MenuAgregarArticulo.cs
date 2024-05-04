@@ -27,7 +27,7 @@ namespace WinFormPantallas
             this.articuloSeleccionado = articuloSeleccionado;
         }
 
-        private void buttonVolver_Click(object sender, EventArgs e)
+        private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -76,12 +76,13 @@ namespace WinFormPantallas
             }
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        private void btnAAceptar_Click(object sender, EventArgs e)
         {
             Articulo articuloNuevo = new Articulo();
             ArticuloManager artMana = new ArticuloManager();   
             try
             {
+                
                 articuloNuevo.descripcion=textBoxDescripcion.Text;
                 articuloNuevo.precio = decimal.Parse(textBoxPrecio.Text);   //HAY QUE VALIDAR ESTO POR SI NO SE INTRODUCE UN VALOR DECIMAL
                 articuloNuevo.codigo=textBoxCodigoArticulo.Text;
@@ -118,5 +119,7 @@ namespace WinFormPantallas
                 pictureBoxPreviewImagen.Load("https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=");
             }
         }
+
+  
     }
 }
