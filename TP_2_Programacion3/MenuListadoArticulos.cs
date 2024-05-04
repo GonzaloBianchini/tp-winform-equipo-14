@@ -107,9 +107,15 @@ namespace WinFormPantallas
 
             try
             {
+                DialogResult respuesta = MessageBox.Show(" Estas por eliminar un articulo. Esta accion no se puede deshacer.", "Eliminando", MessageBoxButtons.YesNo,MessageBoxIcon.Warning );
+
+                if(respuesta == DialogResult.Yes)
+                {
                 Seleccionado = (Articulo)dataGridViewListadoArticulos.CurrentRow.DataBoundItem;
                 articulo.eliminar(Seleccionado.id);
                 cargar();   
+                   
+                }
 
             }
             catch (Exception ex)
