@@ -48,7 +48,7 @@ namespace WinFormPantallas
             }
             catch(Exception ex)
             {
-                pictureBoxImagenesArticulos.Load("https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=");
+                pictureBoxImagenesArticulos.Load("https://lh3.googleusercontent.com/proxy/jqqWJjcMEOB_l4SJJt9CFmQ-TRwAluEyp0heuNsFc84MWiRVPZ6ShOI9N6IWXpT6kFmOcIVDusGorkSuNkKAZZDDqvpiyJ2WF6zsZFpTdPdVBH-2TfQ51Bo");
             }
         }
 
@@ -68,7 +68,7 @@ namespace WinFormPantallas
                 }
                 catch(Exception ex)
                 {
-                    pictureBoxImagenesArticulos.Load("https://media.istockphoto.com/id/1396814518/vector/image-coming-soon-no-photo-no-thumbnail-image-available-vector-illustration.jpg?s=612x612&w=0&k=20&c=hnh2OZgQGhf0b46-J2z7aHbIWwq8HNlSDaNp2wn_iko=");
+                    pictureBoxImagenesArticulos.Load("https://lh3.googleusercontent.com/proxy/jqqWJjcMEOB_l4SJJt9CFmQ-TRwAluEyp0heuNsFc84MWiRVPZ6ShOI9N6IWXpT6kFmOcIVDusGorkSuNkKAZZDDqvpiyJ2WF6zsZFpTdPdVBH-2TfQ51Bo");
                 }
 
             }
@@ -123,6 +123,11 @@ namespace WinFormPantallas
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void pictureBoxImagenesArticulos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
