@@ -124,5 +124,10 @@ namespace WinFormPantallas
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
