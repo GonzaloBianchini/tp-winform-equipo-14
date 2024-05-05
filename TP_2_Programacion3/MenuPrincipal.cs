@@ -52,5 +52,9 @@ namespace WinFormPantallas
 
         }
 
+        private void btnDetallesArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

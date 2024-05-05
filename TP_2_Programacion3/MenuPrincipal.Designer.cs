@@ -40,19 +40,18 @@
             // 
             this.labelCatalogoArticulos.AutoSize = true;
             this.labelCatalogoArticulos.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCatalogoArticulos.Location = new System.Drawing.Point(110, 32);
-            this.labelCatalogoArticulos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCatalogoArticulos.Location = new System.Drawing.Point(140, 64);
             this.labelCatalogoArticulos.Name = "labelCatalogoArticulos";
-            this.labelCatalogoArticulos.Size = new System.Drawing.Size(265, 22);
+            this.labelCatalogoArticulos.Size = new System.Drawing.Size(320, 25);
             this.labelCatalogoArticulos.TabIndex = 1;
             this.labelCatalogoArticulos.Text = "CATALOGO DE ARTICULOS";
             // 
             // btnBuscarArticulo
             // 
-            this.btnBuscarArticulo.Location = new System.Drawing.Point(51, 106);
-            this.btnBuscarArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarArticulo.Location = new System.Drawing.Point(32, 173);
+            this.btnBuscarArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscarArticulo.Name = "btnBuscarArticulo";
-            this.btnBuscarArticulo.Size = new System.Drawing.Size(86, 58);
+            this.btnBuscarArticulo.Size = new System.Drawing.Size(145, 119);
             this.btnBuscarArticulo.TabIndex = 2;
             this.btnBuscarArticulo.Text = "Buscar Articulo";
             this.btnBuscarArticulo.UseVisualStyleBackColor = true;
@@ -60,10 +59,10 @@
             // 
             // btnListarArticulos
             // 
-            this.btnListarArticulos.Location = new System.Drawing.Point(298, 106);
-            this.btnListarArticulos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnListarArticulos.Location = new System.Drawing.Point(443, 173);
+            this.btnListarArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListarArticulos.Name = "btnListarArticulos";
-            this.btnListarArticulos.Size = new System.Drawing.Size(83, 58);
+            this.btnListarArticulos.Size = new System.Drawing.Size(148, 119);
             this.btnListarArticulos.TabIndex = 4;
             this.btnListarArticulos.Text = "Listar Articulos";
             this.btnListarArticulos.UseVisualStyleBackColor = true;
@@ -71,10 +70,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(172, 340);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(242, 418);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(84, 24);
+            this.btnSalir.Size = new System.Drawing.Size(144, 60);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -82,19 +81,20 @@
             // 
             // btnDetallesArticulo
             // 
-            this.btnDetallesArticulo.Location = new System.Drawing.Point(187, 208);
-            this.btnDetallesArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDetallesArticulo.Location = new System.Drawing.Point(242, 173);
+            this.btnDetallesArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDetallesArticulo.Name = "btnDetallesArticulo";
-            this.btnDetallesArticulo.Size = new System.Drawing.Size(83, 48);
+            this.btnDetallesArticulo.Size = new System.Drawing.Size(144, 119);
             this.btnDetallesArticulo.TabIndex = 8;
             this.btnDetallesArticulo.Text = "Detalles de Articulos";
             this.btnDetallesArticulo.UseVisualStyleBackColor = true;
+            this.btnDetallesArticulo.Click += new System.EventHandler(this.btnDetallesArticulo_Click);
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 440);
+            this.ClientSize = new System.Drawing.Size(635, 532);
             this.Controls.Add(this.btnDetallesArticulo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnListarArticulos);
@@ -103,9 +103,9 @@
             this.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(494, 479);
-            this.MinimumSize = new System.Drawing.Size(494, 479);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(653, 579);
+            this.MinimumSize = new System.Drawing.Size(653, 579);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Super Catalogo";
