@@ -23,5 +23,20 @@ namespace WinFormPantallas
         {
             Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBuscador_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
