@@ -102,6 +102,9 @@ namespace WinFormPantallas
             }
         }
 
+
+
+
         private void textBoxURL_Leave(object sender, EventArgs e)
         {
             cargarImagen(textBoxURL.Text);

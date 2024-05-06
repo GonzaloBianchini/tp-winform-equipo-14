@@ -31,6 +31,7 @@ namespace WinFormPantallas
         // Boton para listar los articulos
         private void buttonListarArticulos_Click(object sender, EventArgs e)
         {
+
             MenuListadoArticulos listado = new MenuListadoArticulos();
             listado.ShowDialog();
         }
