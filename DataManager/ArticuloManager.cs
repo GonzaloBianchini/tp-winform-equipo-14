@@ -7,50 +7,52 @@ using System.Threading.Tasks;
 
 namespace DataManager
 {
+   
     public class ArticuloManager
     {
         public List<Articulo> Listar()
         {
-            List<Articulo> lista= new List<Articulo>();
+            List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("SELECT ARTICULOS.Id AS Id,ARTICULOS.Codigo AS Codigo,ARTICULOS.Nombre AS Nombre,ARTICULOS.Descripcion AS Descripcion,Articulos.Precio AS Precio,MARCAS.Descripcion AS Marca,CATEGORIAS.Descripcion AS Categoria,IMAGENES.ImagenUrl AS ImagenUrl FROM ARTICULOS INNER JOIN MARCAS ON MARCAS.Id=ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id=ARTICULOS.IdCategoria INNER JOIN IMAGENES ON IMAGENES.IdArticulo=ARTICULOS.Id");
+                datos.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion AS DescripcionArticulo, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A INNER JOIN MARCAS M ON A.IdMarca = M.Id INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo;");
                 datos.EjecutarLectura();
-
 
                 while (datos.Lector.Read())
                 {
-
-                    Articulo aux= new Articulo();
+                    Articulo aux = new Articulo();
                     aux.id = (int)datos.Lector["Id"];
                     aux.codigo = (string)datos.Lector["Codigo"];
                     aux.nombre = (string)datos.Lector["Nombre"];
-                    aux.descripcion = (string)datos.Lector["Descripcion"];
+                    aux.descripcion = (string)datos.Lector["DescripcionArticulo"];
                     aux.precio = (decimal)datos.Lector["Precio"];
-                    aux.marca=new Marca();  //instancio el objeto interno para evitar la null reference
-                    aux.marca.descripcion =(string) datos.Lector["Marca"];
-                    aux.categoria=new Categoria();  ////instancio el objeto interno para evitar la null reference
-                    aux.categoria.descripcion = (string)datos.Lector["Categoria"];
 
-                    if ( !(datos.Lector["ImagenUrl"] is DBNull))
+                    // Instanciación de objetos internos
+                    aux.marca = new Marca { descripcion = (string)datos.Lector["Marca"] };
+                    aux.categoria = new Categoria { descripcion = (string)datos.Lector["Categoria"] };
+
+                    // Verificar si ImagenUrl es nulo antes de asignar
+                    if (datos.Lector["ImagenUrl"] != DBNull.Value)
                         aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
 
                     lista.Add(aux);
                 }
 
-
                 return lista;
             }
             catch (Exception ex)
             {
-                throw ex;
+                // Manejar la excepción adecuadamente, por ejemplo:
+                Console.WriteLine("Error al listar los artículos: " + ex.Message);
+                throw;
             }
             finally
             {
                 datos.cerrarConexion();
             }
         }
+
 
         public void agregar(Articulo artNue)
         {

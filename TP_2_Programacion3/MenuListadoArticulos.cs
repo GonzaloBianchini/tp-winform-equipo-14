@@ -38,6 +38,7 @@ namespace WinFormPantallas
             dataGridViewListadoArticulos.Columns["Id"].Visible = false;
 
             cargarImagen(listaArticulos[0].ImagenUrl);
+            
         }
 
         private void cargarImagen(string URL)
@@ -80,6 +81,8 @@ namespace WinFormPantallas
             MenuAgregarArticulo menuAgregarArticulo = new MenuAgregarArticulo();
             menuAgregarArticulo.ShowDialog();
             cargar();
+            Close(); // Cierra la ventana después de cargar los datos
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -128,11 +131,16 @@ namespace WinFormPantallas
         private void btnFiltro_Click(object sender, EventArgs e)
         {
 
+
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void limpiarPantalla()
         {
+            
+
 
         }
+      
     }
 }

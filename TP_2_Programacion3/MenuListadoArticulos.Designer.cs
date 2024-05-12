@@ -46,19 +46,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(408, 9);
+            this.label1.Location = new System.Drawing.Point(306, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 32);
+            this.label1.Size = new System.Drawing.Size(258, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "LISTA DE ARTICULOS";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(672, 438);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolver.Location = new System.Drawing.Point(504, 356);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(215, 46);
+            this.btnVolver.Size = new System.Drawing.Size(161, 37);
             this.btnVolver.TabIndex = 3;
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -68,14 +68,14 @@
             // 
             this.dataGridViewListadoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListadoArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridViewListadoArticulos.Location = new System.Drawing.Point(12, 121);
-            this.dataGridViewListadoArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewListadoArticulos.Location = new System.Drawing.Point(9, 98);
+            this.dataGridViewListadoArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewListadoArticulos.MultiSelect = false;
             this.dataGridViewListadoArticulos.Name = "dataGridViewListadoArticulos";
             this.dataGridViewListadoArticulos.RowHeadersWidth = 51;
             this.dataGridViewListadoArticulos.RowTemplate.Height = 24;
             this.dataGridViewListadoArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewListadoArticulos.Size = new System.Drawing.Size(906, 283);
+            this.dataGridViewListadoArticulos.Size = new System.Drawing.Size(680, 230);
             this.dataGridViewListadoArticulos.TabIndex = 4;
             this.dataGridViewListadoArticulos.SelectionChanged += new System.EventHandler(this.dataGridViewListadoArticulos_SelectionChanged);
             // 
@@ -85,20 +85,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxImagenesArticulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxImagenesArticulos.Location = new System.Drawing.Point(984, 121);
-            this.pictureBoxImagenesArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxImagenesArticulos.Location = new System.Drawing.Point(738, 98);
+            this.pictureBoxImagenesArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxImagenesArticulos.Name = "pictureBoxImagenesArticulos";
-            this.pictureBoxImagenesArticulos.Size = new System.Drawing.Size(258, 283);
+            this.pictureBoxImagenesArticulos.Size = new System.Drawing.Size(194, 230);
             this.pictureBoxImagenesArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImagenesArticulos.TabIndex = 5;
             this.pictureBoxImagenesArticulos.TabStop = false;
             // 
             // btnAgregarArticulo
             // 
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(12, 438);
-            this.btnAgregarArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(9, 356);
+            this.btnAgregarArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
-            this.btnAgregarArticulo.Size = new System.Drawing.Size(152, 46);
+            this.btnAgregarArticulo.Size = new System.Drawing.Size(114, 37);
             this.btnAgregarArticulo.TabIndex = 8;
             this.btnAgregarArticulo.Text = "Agregar Articulo";
             this.btnAgregarArticulo.UseVisualStyleBackColor = true;
@@ -106,10 +106,10 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(170, 438);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModificar.Location = new System.Drawing.Point(128, 356);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(147, 46);
+            this.btnModificar.Size = new System.Drawing.Size(110, 37);
             this.btnModificar.TabIndex = 9;
             this.btnModificar.Text = "Modificar Articulo";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -117,10 +117,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(332, 438);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(249, 356);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(147, 46);
+            this.btnEliminar.Size = new System.Drawing.Size(110, 37);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar Articulo";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -128,19 +128,17 @@
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(64, 79);
-            this.txtFiltro.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFiltro.Location = new System.Drawing.Point(54, 62);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(297, 22);
+            this.txtFiltro.Size = new System.Drawing.Size(224, 20);
             this.txtFiltro.TabIndex = 12;
             // 
             // btnFiltro
             // 
             this.btnFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltro.Location = new System.Drawing.Point(379, 73);
-            this.btnFiltro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFiltro.Location = new System.Drawing.Point(311, 59);
             this.btnFiltro.Name = "btnFiltro";
-            this.btnFiltro.Size = new System.Drawing.Size(100, 28);
+            this.btnFiltro.Size = new System.Drawing.Size(75, 23);
             this.btnFiltro.TabIndex = 13;
             this.btnFiltro.Text = "Buscar";
             this.btnFiltro.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -149,10 +147,10 @@
             // 
             // MenuListadoArticulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1274, 560);
+            this.ClientSize = new System.Drawing.Size(956, 455);
             this.Controls.Add(this.btnFiltro);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.btnEliminar);
@@ -164,7 +162,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuListadoArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadoArticulos";
