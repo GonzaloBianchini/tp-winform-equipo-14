@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataManager
 {
-   
+
     public class ArticuloManager
     {
         public List<Articulo> Listar()
@@ -54,31 +54,31 @@ namespace DataManager
         }
 
 
-        public void agregar(Articulo artNue)
+        public void Agregar(Articulo artNue)
         {
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
                 // Establecer consulta de inserción
-                datos.SetearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) VALUES(@Codigo, @Nombre, @Descripcion, @Precio, @IdMarca, @IdCategoria)");
+                datos.SetearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) " +
+                                     "VALUES (@Codigo, @Nombre, @Descripcion, @Precio, @IdMarca, @IdCategoria); " +
+                                     "SELECT SCOPE_IDENTITY();"); // Recupera el ID insertado
                 datos.setearParametro("@Codigo", artNue.codigo);
                 datos.setearParametro("@Nombre", artNue.nombre);
                 datos.setearParametro("@Descripcion", artNue.descripcion);
                 datos.setearParametro("@Precio", artNue.precio);
                 datos.setearParametro("@IdMarca", artNue.marca.id);
                 datos.setearParametro("@IdCategoria", artNue.categoria.id);
-                datos.ejecutarAccion();
 
-                // Obtener el Id del artículo recién insertado
-                datos.SetearConsulta("SELECT SCOPE_IDENTITY()");
+                // Ejecutar la consulta y obtener el ID del artículo recién insertado
                 object result = datos.ejecutarEscalar();
 
                 if (result != DBNull.Value)
                 {
                     int idArticulo = Convert.ToInt32(result);
 
-                    // Insertar la imagen vinculando el id del artículo
+                    // Insertar la imagen vinculando el ID del artículo
                     if (!string.IsNullOrEmpty(artNue.ImagenUrl))
                     {
                         datos.SetearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl)");
@@ -94,7 +94,7 @@ namespace DataManager
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception("Error al agregar el artículo: " + ex.Message);
             }
             finally
             {
@@ -118,8 +118,6 @@ namespace DataManager
                 datos.setearParametro("@IdCategoria", artExistente.categoria.id);
                 datos.setearParametro("@Id", artExistente.id);
                 datos.ejecutarAccion();
-                datos.cerrarConexion(); // Cerrar la conexión antes de iniciar la siguiente acción
-
 
                 // Modificar la imagen
                 datos.SetearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE IdArticulo = @IdArticulo");
@@ -129,13 +127,12 @@ namespace DataManager
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception("Error al modificar el artículo: " + ex.Message);
             }
             finally
             {
                 datos.cerrarConexion();
             }
-            
 
         }
 
@@ -144,7 +141,7 @@ namespace DataManager
             try
             {
                 AccesoDatos datos = new AccesoDatos();
-                datos.SetearConsulta("DELETE FROM ARTICULOS WHERE Id = @id" );
+                datos.SetearConsulta("DELETE FROM ARTICULOS WHERE Id = @id");
                 datos.setearParametro("@id", id);
                 datos.ejecutarAccion();
 
@@ -154,7 +151,7 @@ namespace DataManager
 
                 throw ex;
             }
-            
+
 
         }
     }
