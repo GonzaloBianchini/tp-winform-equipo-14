@@ -60,30 +60,48 @@ namespace DataManager
 
             try
             {
-                datos.SetearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, Precio,IdMarca,IdCategoria) VALUES('" + artNue.codigo + "','" + artNue.nombre + "','" + artNue.descripcion + "',"+ artNue.precio +",@IdMarca,@IdCategoria)");
-                datos.setearParametro("@IdMarca",artNue.marca.id);
-                datos.setearParametro("@IdCategoria",artNue.categoria.id);
+                // Establecer consulta de inserción
+                datos.SetearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) VALUES(@Codigo, @Nombre, @Descripcion, @Precio, @IdMarca, @IdCategoria)");
+                datos.setearParametro("@Codigo", artNue.codigo);
+                datos.setearParametro("@Nombre", artNue.nombre);
+                datos.setearParametro("@Descripcion", artNue.descripcion);
+                datos.setearParametro("@Precio", artNue.precio);
+                datos.setearParametro("@IdMarca", artNue.marca.id);
+                datos.setearParametro("@IdCategoria", artNue.categoria.id);
                 datos.ejecutarAccion();
 
-                /*
-                //meto la imagen vinculando id de articulo
-                datos.SetearConsulta("DECLARE @IdArticulo INT SET @IdArticulo = SCOPE_IDENTITY()");
-                datos.ejecutarAccion();
+                // Obtener el Id del artículo recién insertado
+                datos.SetearConsulta("SELECT SCOPE_IDENTITY()");
+                object result = datos.ejecutarEscalar();
 
-                
-                datos.SetearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, '"+artNue.ImagenUrl+"')");
-                datos.ejecutarAccion();
-                */
+                if (result != DBNull.Value)
+                {
+                    int idArticulo = Convert.ToInt32(result);
+
+                    // Insertar la imagen vinculando el id del artículo
+                    if (!string.IsNullOrEmpty(artNue.ImagenUrl))
+                    {
+                        datos.SetearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl)");
+                        datos.setearParametro("@IdArticulo", idArticulo);
+                        datos.setearParametro("@ImagenUrl", artNue.ImagenUrl);
+                        datos.ejecutarAccion();
+                    }
+                }
+                else
+                {
+                    throw new Exception("No se pudo obtener el ID del artículo recién insertado.");
+                }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                throw ex; 
+                throw ex;
             }
-            finally 
+            finally
             {
                 datos.cerrarConexion();
             }
         }
+
 
         public void modificar(Articulo artExistente)
         {
@@ -91,13 +109,22 @@ namespace DataManager
 
             try
             {
-                datos.SetearConsulta("UPDATE ARTICULOS SET Codigo = '" + artExistente.codigo + "', Nombre = '" + artExistente.nombre + "', Descripcion = '" + artExistente.descripcion + "', Precio = " + artExistente.precio + ", IdMarca = @IdMarca, IdCategoria = @IdCategoria WHERE Id = " + artExistente.id);
+                datos.SetearConsulta("UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, Precio = @Precio, IdMarca = @IdMarca, IdCategoria = @IdCategoria WHERE Id = @Id");
+                datos.setearParametro("@Codigo", artExistente.codigo);
+                datos.setearParametro("@Nombre", artExistente.nombre);
+                datos.setearParametro("@Descripcion", artExistente.descripcion);
+                datos.setearParametro("@Precio", artExistente.precio);
                 datos.setearParametro("@IdMarca", artExistente.marca.id);
                 datos.setearParametro("@IdCategoria", artExistente.categoria.id);
+                datos.setearParametro("@Id", artExistente.id);
                 datos.ejecutarAccion();
+                datos.cerrarConexion(); // Cerrar la conexión antes de iniciar la siguiente acción
 
-                //modifico la imagen
-                datos.SetearConsulta("UPDATE IMAGENES SET ImagenUrl = '" + artExistente.ImagenUrl + "' WHERE IdArticulo = " + artExistente.id);
+
+                // Modificar la imagen
+                datos.SetearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE IdArticulo = @IdArticulo");
+                datos.setearParametro("@ImagenUrl", artExistente.ImagenUrl);
+                datos.setearParametro("@IdArticulo", artExistente.id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

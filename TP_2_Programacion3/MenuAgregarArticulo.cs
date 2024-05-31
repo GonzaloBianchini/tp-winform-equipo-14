@@ -25,6 +25,16 @@ namespace WinFormPantallas
         {
             InitializeComponent();
             this.articuloSeleccionado = articuloSeleccionado;
+
+            textBoxNombreArticulo.Text = articuloSeleccionado.nombre;
+            textBoxDescripcion.Text = articuloSeleccionado.descripcion;
+            textBoxPrecio.Text = articuloSeleccionado.precio.ToString();
+            textBoxCodigoArticulo.Text = articuloSeleccionado.codigo;
+            comboBoxCategorias.SelectedItem = articuloSeleccionado.categoria;
+            comboBoxMarcas.SelectedItem = articuloSeleccionado.marca;
+            textBoxURL.Text = articuloSeleccionado.ImagenUrl;
+            cargarImagen(articuloSeleccionado.ImagenUrl);
+            
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -79,24 +89,23 @@ namespace WinFormPantallas
         private void btnAAceptar_Click(object sender, EventArgs e)
         {
             Articulo articuloNuevo = new Articulo();
-            ArticuloManager artMana = new ArticuloManager();   
+            ArticuloManager artMana = new ArticuloManager();
             try
             {
-                
-                articuloNuevo.descripcion=textBoxDescripcion.Text;
-                articuloNuevo.precio = decimal.Parse(textBoxPrecio.Text);   //HAY QUE VALIDAR ESTO POR SI NO SE INTRODUCE UN VALOR DECIMAL
-                articuloNuevo.codigo=textBoxCodigoArticulo.Text;
-                articuloNuevo.nombre=textBoxNombreArticulo.Text;
+                articuloNuevo.descripcion = textBoxDescripcion.Text;
+                articuloNuevo.precio = decimal.Parse(textBoxPrecio.Text); // Asegúrate de que el texto sea un valor decimal válido
+                articuloNuevo.codigo = textBoxCodigoArticulo.Text;
+                articuloNuevo.nombre = textBoxNombreArticulo.Text;
                 articuloNuevo.categoria = (Categoria)comboBoxCategorias.SelectedItem;
-                articuloNuevo.marca=(Marca)comboBoxMarcas.SelectedItem;
+                articuloNuevo.marca = (Marca)comboBoxMarcas.SelectedItem;
                 articuloNuevo.ImagenUrl = textBoxURL.Text;
-                //validarDatos();       // HACER ESTA FUNCION?
-                
-                //falta imagenes
+
+                // Llamar al método agregar
                 artMana.agregar(articuloNuevo);
-                MessageBox.Show("Articulo Agregado!");
+                MessageBox.Show("Artículo Agregado!");
+                this.Close(); // Cerrar la ventana actual después de agregar el artículo
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }

@@ -56,7 +56,7 @@
             // btnVolver
             // 
             this.btnVolver.Location = new System.Drawing.Point(504, 356);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(161, 37);
             this.btnVolver.TabIndex = 3;
@@ -69,7 +69,7 @@
             this.dataGridViewListadoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListadoArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewListadoArticulos.Location = new System.Drawing.Point(9, 98);
-            this.dataGridViewListadoArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewListadoArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewListadoArticulos.MultiSelect = false;
             this.dataGridViewListadoArticulos.Name = "dataGridViewListadoArticulos";
             this.dataGridViewListadoArticulos.RowHeadersWidth = 51;
@@ -86,7 +86,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxImagenesArticulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxImagenesArticulos.Location = new System.Drawing.Point(738, 98);
-            this.pictureBoxImagenesArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxImagenesArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImagenesArticulos.Name = "pictureBoxImagenesArticulos";
             this.pictureBoxImagenesArticulos.Size = new System.Drawing.Size(194, 230);
             this.pictureBoxImagenesArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -96,7 +96,7 @@
             // btnAgregarArticulo
             // 
             this.btnAgregarArticulo.Location = new System.Drawing.Point(9, 356);
-            this.btnAgregarArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(114, 37);
             this.btnAgregarArticulo.TabIndex = 8;
@@ -107,7 +107,7 @@
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(128, 356);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(110, 37);
             this.btnModificar.TabIndex = 9;
@@ -118,7 +118,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(249, 356);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(110, 37);
             this.btnEliminar.TabIndex = 10;
@@ -132,6 +132,7 @@
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(224, 20);
             this.txtFiltro.TabIndex = 12;
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
             // btnFiltro
             // 
@@ -162,7 +163,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuListadoArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadoArticulos";

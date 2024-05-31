@@ -71,11 +71,15 @@ namespace WinFormPantallas
         private void aRTICULOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+
+
         }
 
         private void buscadorDeArticulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
+
+      
     }
 }

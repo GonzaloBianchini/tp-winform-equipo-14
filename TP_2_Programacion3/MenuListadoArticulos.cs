@@ -78,28 +78,37 @@ namespace WinFormPantallas
 
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
+            
+
             MenuAgregarArticulo menuAgregarArticulo = new MenuAgregarArticulo();
-            menuAgregarArticulo.ShowDialog();
-            cargar();
-            Close(); // Cierra la ventana después de cargar los datos
+            menuAgregarArticulo.ShowDialog(); 
+            cargar(); 
+            
+
 
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if(dataGridViewListadoArticulos.CurrentRow != null)
+            if (dataGridViewListadoArticulos.CurrentRow != null)
             {
                 Articulo artSeleccionado = (Articulo)dataGridViewListadoArticulos.CurrentRow.DataBoundItem;
-                MenuAgregarArticulo menuModificarArticulo = new MenuAgregarArticulo(artSeleccionado);
-                menuModificarArticulo.ShowDialog();
-                cargar();
-               
+                if (artSeleccionado != null)
+                {
+                    MessageBox.Show($"Modificando artículo: {artSeleccionado.nombre}", "Depuración", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MenuAgregarArticulo menuModificarArticulo = new MenuAgregarArticulo(artSeleccionado);
+                    menuModificarArticulo.ShowDialog();
+                    cargar();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo obtener el artículo seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Seleccione un articulo para modificar");
+                MessageBox.Show("Seleccione un artículo para modificar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
 
         }
 
@@ -130,17 +139,15 @@ namespace WinFormPantallas
 
         private void btnFiltro_Click(object sender, EventArgs e)
         {
-
-
+            txtFiltro.Visible = !txtFiltro.Visible;
+            txtFiltro.Text = "";
         }
 
-
-        private void limpiarPantalla()
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
-            
-
+            List<Articulo> listaFiltrada = listaArticulos.FindAll(A => A.nombre.ToUpper().Contains(txtFiltro.Text.ToUpper()));
+            dataGridViewListadoArticulos.DataSource = listaFiltrada;
 
         }
-      
     }
 }

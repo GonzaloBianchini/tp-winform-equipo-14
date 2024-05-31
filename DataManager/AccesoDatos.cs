@@ -22,7 +22,7 @@ namespace DataManager
         //defino el constructor
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=MARTIN\\SQLEXPRESS02; database=CATALOGO_P3_DB; integrated security=true");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
             comando = new SqlCommand();
         }
 
@@ -58,7 +58,33 @@ namespace DataManager
             {
                 throw ex;
             }
+            finally
+            {
+                cerrarConexion();
+            }
         }
+
+
+        public object ejecutarEscalar()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                return comando.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+
+
 
         public void setearParametro(string parametro,object valor)
         {
